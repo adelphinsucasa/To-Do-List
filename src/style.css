@@ -3,3 +3,90 @@
   margin: 0;
   padding: 0;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+main .listContainer form img {
+  width: 20px;
+}
+
+main .listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  border: 1px solid #ebebeb;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+main .listContainer .topTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  height: 40px;
+  color: #6f727b;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .listContainer ul li img {
+  width: 20px;
+}
+
+main .listContainer .topTitle a img {
+  width: 20px;
+}
+
+main .listContainer form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .listContainer form input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  font-style: italic;
+}
+
+main .listContainer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 10px;
+  width: 100%;
+}
+
+main .listContainer ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .listContainer button {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: none;
+}
