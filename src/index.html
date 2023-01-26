@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>To Do List by Jose Delphin</title>
 </head>
 <body>
@@ -15,16 +14,15 @@
         <div class="listContainer">
             <section class="topTitle">
                 <h2>List of Activities</h2>
-                <a href="#"><img src="./assets/images/iconRefresh.png" alt="icon Refresh"></a>
+                <button class="btnStart" type="button"><img src="./assets/images/iconRefresh.png" alt="icon Refresh"></button>
             </section>
-            <form action="">
-                <input type="text" name="newTask" id="newTask" placeholder="Add your list...">
-                <a href="#"><img src="./assets/images/iconAdd.png" alt="icon Add"></a>
+            <form id="addTaskForm" action="">
+                <input type="text" name="txtNewTask" id="txtNewTask" placeholder="Add your list...">
+                <button class="addTask" type="submit"><img id="btnAddTask" src="./assets/images/iconAdd.png" alt="icon Add"></button>
             </form>
-            <ul id="taskList"></ul>
+            <ul id="ulTaskList"></ul>
             <button type="button" class="btnClear">Clear all completed</button>
         </div>
     </main>
-    <script src="index.js"></script>
 </body>
 </html>

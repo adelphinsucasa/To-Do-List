@@ -44,12 +44,46 @@ main .listContainer .topTitle {
   border-bottom: 1px solid #ebebeb;
 }
 
-main .listContainer ul li img {
+main .listContainer form button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer ul li button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer ul li img,
+main .listContainer .topTitle button img {
   width: 20px;
 }
 
-main .listContainer .topTitle a img {
-  width: 20px;
+main .listContainer ul li button,
+main .listContainer .topTitle button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+main .listContainer .topTitle button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer form button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
+}
+
+main .listContainer ul li button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
+}
+
+main .listContainer .topTitle button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
 }
 
 main .listContainer form {
@@ -74,11 +108,17 @@ main .listContainer form input:focus {
   color: #6f727b;
 }
 
+main .listContainer form .addTask {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
 main .listContainer ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 0 10px;
+  padding: 0;
   width: 100%;
 }
 
@@ -88,6 +128,37 @@ main .listContainer ul li {
   justify-content: space-between;
   height: 40px;
   border-bottom: 1px solid #ebebeb;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+main .listContainer ul li .taskDescription {
+  flex-grow: 4;
+  margin: 0 10px;
+  height: 30px;
+  border: none;
+}
+
+main .listContainer ul li input:focus {
+  background-color: rgb(239, 239, 167);
+  outline: none;
+}
+
+.selected {
+  background-color: rgb(239, 239, 167);
+  width: 100%;
+}
+
+.unselected {
+  background-color: white;
+}
+
+.fontDached {
+  text-decoration: line-through;
+}
+
+.fontUndached {
+  text-decoration: none;
 }
 
 main .listContainer .btnClear {
