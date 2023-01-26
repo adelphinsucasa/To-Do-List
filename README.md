@@ -5,7 +5,7 @@
   <br/>
 
   <h3><b>Jose Alejandro Delphin Puente</b></h3>
-  <h3><b>Awesome Books With ES6</b></h3>
+  <h3><b>To Do List by Jose Delphin</b></h3>
 </div>
 
 # 📗 Table of Contents
@@ -14,6 +14,7 @@
     - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🧑🏻‍💻 Live Demo](#live-demo)    
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Clone](#prerequisites)
@@ -64,6 +65,9 @@
  </ul>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
+
+<a href="https://adelphinsucasa.github.io/To-Do-List/dist/">Visit the Live Demo</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
