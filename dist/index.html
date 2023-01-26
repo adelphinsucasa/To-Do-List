@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List by Jose Delphin</title>
+<script defer src="runtime.js"></script><script defer src="main.js"></script></head>
+<body>
+    <header>
+        <h1>To Do List by Jose Delphin</h1>
+    </header>
+    <main>
+        <div class="listContainer">
+            <section class="topTitle">
+                <h2>List of Activities</h2>
+                <button class="btnStart" type="button"><img src="./assets/images/iconRefresh.png" alt="icon Refresh"></button>
+            </section>
+            <form id="addTaskForm" action="">
+                <input type="text" name="txtNewTask" id="txtNewTask" placeholder="Add your list...">
+                <button class="addTask" type="submit"><img id="btnAddTask" src="./assets/images/iconAdd.png" alt="icon Add"></button>
+            </form>
+            <ul id="ulTaskList"></ul>
+            <button type="button" class="btnClear">Clear all completed</button>
+        </div>
+    </main>
+</body>
+</html>

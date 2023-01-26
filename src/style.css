@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+main .listContainer form img {
+  width: 20px;
+}
+
+main .listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  border: 1px solid #ebebeb;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+main .listContainer .topTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  height: 40px;
+  color: #6f727b;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .listContainer form button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer ul li button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer ul li img,
+main .listContainer .topTitle button img {
+  width: 20px;
+}
+
+main .listContainer ul li button,
+main .listContainer .topTitle button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+main .listContainer .topTitle button {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+main .listContainer form button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
+}
+
+main .listContainer ul li button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
+}
+
+main .listContainer .topTitle button:hover {
+  background-color: rgb(223, 223, 144);
+  opacity: 0.6;
+}
+
+main .listContainer form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+main .listContainer form input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  font-size: 15px;
+  font-style: italic;
+}
+
+main .listContainer form input:focus {
+  outline: none;
+  color: #6f727b;
+}
+
+main .listContainer form .addTask {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+main .listContainer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+main .listContainer ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid #ebebeb;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+main .listContainer ul li .taskDescription {
+  flex-grow: 4;
+  margin: 0 10px;
+  height: 30px;
+  border: none;
+}
+
+main .listContainer ul li input:focus {
+  background-color: rgb(239, 239, 167);
+  outline: none;
+}
+
+.selected {
+  background-color: rgb(239, 239, 167);
+  width: 100%;
+}
+
+.unselected {
+  background-color: white;
+}
+
+.fontDached {
+  text-decoration: line-through;
+}
+
+.fontUndached {
+  text-decoration: none;
+}
+
+main .listContainer .btnClear {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: #7f7f7f;
+}
+
+main .listContainer .btnClear:hover {
+  text-decoration: underline;
+  background-color: #c2c4c7;
+  cursor: pointer;
+}
