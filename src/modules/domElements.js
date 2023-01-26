@@ -42,8 +42,10 @@ const addElementsToDom = () => {
   });
 
   document.querySelectorAll('.taskChkBox').forEach((chkTask, index) => {
-    chkTask.addEventListener('click', () => {
+    chkTask.addEventListener('change', () => {
       const inputDesc = document.querySelector(`#taskDescription${index + 1}`);
+      newTasksCollection.setCompleted(index, chkTask.checked);
+
       if (chkTask.checked) {
         inputDesc.classList.add('fontDached');
         inputDesc.classList.remove('fontUndached');
@@ -87,11 +89,7 @@ const addElementsToDom = () => {
   });
 
   btnClearAll.addEventListener('click', () => {
-    document.querySelectorAll('.taskChkBox').forEach((chkTask) => {
-      if (!chkTask.checked) {
-        chkTask.click();
-      }
-    });
+    newTasksCollection.clearAllCompleted();
   });
 };
 export default addElementsToDom;
