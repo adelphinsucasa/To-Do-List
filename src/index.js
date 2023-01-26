@@ -3,9 +3,8 @@ import './assets/images/iconRefresh.png';
 import './assets/images/iconMore.png';
 import './assets/images/iconAdd.png';
 import './assets/images/iconDelete.png';
-import addElementsToDom from './modules/domElements.js';
 
-import TaskCollection from './taskCollection.js';
+import TaskCollection from './modules/taskCollection.js';
 
 const addElementsToDom = () => {
   const btnStart = document.querySelector('.btnStart');
