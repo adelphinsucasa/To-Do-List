@@ -4,11 +4,17 @@
   "description": "<a name=\"To Do List by Jose Delphin\"></a>",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack",
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
   },
+<<<<<<< HEAD
+=======
+  "jest": {
+    "verbose": true
+  },
+>>>>>>> dde5a3073ed877f0ba2c8a9351d889a0497fabb8
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adelphinsucasa/To-Do-List.git"
