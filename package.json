@@ -10,7 +10,7 @@
     "start": "webpack serve --open"
   },
   "jest": {
-    "verbose": true
+    "verbose": false
   },
   "repository": {
     "type": "git",
