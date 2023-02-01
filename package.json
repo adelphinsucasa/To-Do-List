@@ -9,9 +9,6 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
   },
-  "jest": {
-    "verbose": false
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adelphinsucasa/To-Do-List.git"
@@ -35,6 +32,8 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -658,5 +657,6 @@
     "yargs-parser": "^20.2.9",
     "yauzl": "^2.10.0",
     "zwitch": "^1.0.5"
-  }
+  },
+  "main": "webpack.config.js"
 }
