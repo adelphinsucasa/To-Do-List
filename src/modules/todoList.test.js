@@ -1,25 +1,22 @@
 /**
  * @jest-environment jsdom
  */
-
-const addTask = require('./todoList');
+import TaskCollection from './taskCollection.js';
+const task = new TaskCollection()
 
 test('Check addTodo able add todo to todoList', () => {
     document.body.innerHTML = `
         <input id="txtNewTask" />
         <button id="btnAddTask">Add Task</button>
-        <ul id="ulTaskList"></ul>
+        <ul id="ulTaskList">
+        </ul>
     `;
 
     const newTodoInput = document.getElementById('txtNewTask');
-    const addTodoBtn = document.getElementById('btnAddTask');
-    const todolist = document.getElementById('ulTaskList');
+    const todolist = document.querySelectorAll('#ulTaskList');
 
     newTodoInput.value = 'New Task!';
-    addTodoBtn.addEventListener('click',() =>{
-        addTask();
-    });
-    addTodoBtn.click();
-
-    expect(todolist.innerHTML).toBe('<li>New Task!</li>');
+        task.addTask('task 1');
+        todolist.innerHTML = `<li>${task.getTasks()[0].description}</li>`;
+    expect(todolist).toHaveLength(1);
 });

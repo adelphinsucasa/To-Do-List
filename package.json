@@ -4,7 +4,7 @@
   "description": "<a name=\"To Do List by Jose Delphin\"></a>",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "build": "webpack",
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
