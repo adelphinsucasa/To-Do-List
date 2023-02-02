@@ -16,7 +16,6 @@ const addElementsToDom = () => {
 
   // LIST TASKS
   let aux = '';
-
   newTasksCollection.getTasks().forEach((newTask) => {
     if (!newTask.completed) {
       aux += `<li id="li${newTask.index}" class="liTask unselected">

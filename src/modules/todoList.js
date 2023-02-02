@@ -20,13 +20,11 @@ export default class TaskCollection {
       }
       this.tasks = result;
       localStorage.setItem('localStorageTasks', JSON.stringify(this.tasks));
-      window.location.reload();
     }
 
     removeAll = () => {
       this.tasks = [];
       localStorage.setItem('localStorageTasks', JSON.stringify(this.tasks));
-      window.location.reload();
     }
 
     editTask = (desc, index) => {
@@ -37,19 +35,14 @@ export default class TaskCollection {
     clearAllCompleted = () => {
       const result = this.tasks.filter((task) => !task.completed);
       for (let i = 0; i < result.length; i += 1) {
-        if (this.tasks[i].completed) this.tasks.pop(i);
-      }
-      for (let i = 0; i < result.length; i += 1) {
         result[i].index = i + 1;
       }
       this.tasks = result;
       localStorage.setItem('localStorageTasks', JSON.stringify(this.tasks));
-      window.location.reload();
     }
 
     setCompleted = (index, value) => {
       this.tasks[index].completed = value;
-      localStorage.setItem('localStorageTasks', JSON.stringify(this.tasks));
     }
 
     getTasks = () => this.tasks;
