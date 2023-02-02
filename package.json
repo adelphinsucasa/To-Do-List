@@ -11,14 +11,18 @@
   },
   "eslintConfig": {
     "env": {
-        "browser": true,
-        "node": true
+      "browser": true,
+      "node": true
     }
   },
-  "eslintIgnore": ["./coverage/*"],
+  "eslintIgnore": [
+    "./coverage/*"
+  ],
   "jest": {
     "resetMocks": false,
-    "setupFiles": ["jest-localstorage-mock"]
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   },
   "repository": {
     "type": "git",
