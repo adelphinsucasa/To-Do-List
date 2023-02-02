@@ -59,6 +59,23 @@ describe('Testing functions', () => {
     expect(todolist.innerHTML).toBe('');
   });
 
+  // Clear All Completed Function
+  test('Check a task completed', () => {
+    const todolist = document.querySelectorAll('#ulTaskList');
+    task.clearAllCompleted()
+
+    let aux = '';
+    task.getTasks().forEach((newTask) => {
+      if (!newTask.completed) {
+        aux += `<li>${newTask.description}</li>`;
+      }
+    });
+    todolist.innerHTML = aux;
+
+    expect(todolist.innerHTML).toBe('');
+    expect(task.getTasks()).toHaveLength(0);
+  });
+
   // removeTask
   test('Check removeTask ', () => {
     const todolist = document.querySelectorAll('#ulTaskList');
