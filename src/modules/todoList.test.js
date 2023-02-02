@@ -62,7 +62,7 @@ describe('Testing functions', () => {
   // Clear All Completed Function
   test('Check a task completed', () => {
     const todolist = document.querySelectorAll('#ulTaskList');
-    task.clearAllCompleted()
+    task.clearAllCompleted();
 
     let aux = '';
     task.getTasks().forEach((newTask) => {
@@ -74,6 +74,17 @@ describe('Testing functions', () => {
 
     expect(todolist.innerHTML).toBe('');
     expect(task.getTasks()).toHaveLength(0);
+  });
+
+  test('Check localstorage', () => {
+    document.body.innerHTML = `
+            <input id="txtNewTask" />
+            <button id="btnAddTask">Add Task</button>
+            <ul id="ulTaskList"></ul>
+        `;
+
+    task.addTask('task 1');
+    expect(localStorage.getItem('localStorageTasks')).not.toBeNull();
   });
 
   // removeTask
