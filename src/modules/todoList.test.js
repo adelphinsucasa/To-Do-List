@@ -27,19 +27,18 @@ describe('Testing functions', () => {
     todolist.innerHTML = aux;
     expect(todolist.innerHTML).toBe('<li>task 1</li>');
   });
-// removeTask
-test('Check removeTask ', () => {
-  const todolist = document.querySelectorAll('#ulTaskList');
-  task.removeTask(0);
+  // removeTask
+  test('Check removeTask ', () => {
+    const todolist = document.querySelectorAll('#ulTaskList');
+    task.removeTask(0);
 
-  let aux = '';
-  task.getTasks().forEach((newTask) => {
-    if (!newTask.completed) {
-      aux += `<li>${newTask.description}</li>`;
-    }
+    let aux = '';
+    task.getTasks().forEach((newTask) => {
+      if (!newTask.completed) {
+        aux += `<li>${newTask.description}</li>`;
+      }
+    });
+    todolist.innerHTML = aux;
+    expect(todolist.innerHTML).toBe('');
   });
-  todolist.innerHTML = aux;
-  expect(todolist.innerHTML).toBe('');
-});
-  
 });
