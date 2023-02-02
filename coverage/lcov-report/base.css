@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: Helvetica Neue, Helvetica, Arial;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #333;
 }
@@ -83,11 +83,18 @@ table.coverage {
   padding: 0;
 }
 
+.coverage-summary td,
+.coverage-summary th { padding: 10px; }
+.coverage-summary tbody { border: 1px solid #bbb; }
+.coverage-summary td { border-right: 1px solid #bbb; }
+
 table.coverage td {
   margin: 0;
   padding: 0;
   vertical-align: top;
 }
+
+.coverage-summary td:last-child { border-right: none; }
 
 table.coverage td.line-count {
   text-align: right;
@@ -137,19 +144,12 @@ table.coverage td span.cline-any {
 .coverage-summary tr { border-bottom: 1px solid #bbb; }
 .keyline-all { border: 1px solid #ddd; }
 
-.coverage-summary td,
-.coverage-summary th { padding: 10px; }
-.coverage-summary tbody { border: 1px solid #bbb; }
-.coverage-summary td { border-right: 1px solid #bbb; }
-.coverage-summary td:last-child { border-right: none; }
-
 .coverage-summary th {
   text-align: left;
   font-weight: normal;
   white-space: nowrap;
 }
 .coverage-summary th.file { border-right: none !important; }
-.coverage-summary th.pct { }
 
 .coverage-summary th.pic,
 .coverage-summary th.abs,
@@ -157,7 +157,6 @@ table.coverage td span.cline-any {
 .coverage-summary td.abs { text-align: right; }
 .coverage-summary td.file { white-space: nowrap; }
 .coverage-summary td.pic { min-width: 120px !important; }
-.coverage-summary tfoot td { }
 
 .coverage-summary .sorter {
   height: 10px;
@@ -179,11 +178,26 @@ table.coverage td span.cline-any {
 /* yellow */
 .cbranch-no { background: yellow !important; color: #111; }
 
+.cover-fill,
+.cover-empty {
+  display: inline-block;
+  height: 12px;
+}
+
+.chart {
+  line-height: 0;
+}
+
 /* dark red */
 .red.solid,
 .status-line.low,
 .low .cover-fill { background: #c21f39; }
 .low .chart { border: 1px solid #c21f39; }
+
+/* medium red */
+.cstat-no,
+.fstat-no,
+.cbranch-no { background: #f6c6ce; }
 
 .highlighted,
 .highlighted .cstat-no,
@@ -191,12 +205,6 @@ table.coverage td span.cline-any {
 .highlighted .cbranch-no {
   background: #c21f39 !important;
 }
-
-/* medium red */
-.cstat-no,
-.fstat-no,
-.cbranch-no,
-.cbranch-no { background: #f6c6ce; }
 
 /* light red */
 .low,
@@ -234,16 +242,6 @@ span.cline-neutral { background: #eaeaea; }
   padding-bottom: 4px;
   line-height: 1;
   color: #888;
-}
-
-.cover-fill,
-.cover-empty {
-  display: inline-block;
-  height: 12px;
-}
-
-.chart {
-  line-height: 0;
 }
 
 .cover-empty {

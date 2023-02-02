@@ -9,6 +9,13 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
   },
+  "eslintConfig": {
+    "env": {
+        "browser": true,
+        "node": true
+    }
+  },
+  "eslintIgnore": ["./coverage/*"],
   "jest": {
     "resetMocks": false,
     "setupFiles": ["jest-localstorage-mock"]

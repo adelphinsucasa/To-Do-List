@@ -27,6 +27,7 @@ describe('Testing functions', () => {
     todolist.innerHTML = aux;
     expect(todolist.innerHTML).toBe('<li>task 1</li>');
   });
+
   // removeTask
   test('Check removeTask ', () => {
     const todolist = document.querySelectorAll('#ulTaskList');
