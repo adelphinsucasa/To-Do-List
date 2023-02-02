@@ -28,10 +28,10 @@ describe('Testing functions', () => {
     expect(todolist.innerHTML).toBe('<li>task 1</li>');
   });
 
-  //Editing Function
-  test('Check a task edited', () =>{
+  // Editing Function
+  test('Check a task edited', () => {
     const todolist = document.querySelectorAll('#ulTaskList');
-    task.editTask('Task 1 modified',0);
+    task.editTask('Task 1 modified', 0);
 
     let aux = '';
     task.getTasks().forEach((newTask) => {
@@ -42,6 +42,21 @@ describe('Testing functions', () => {
     todolist.innerHTML = aux;
 
     expect(todolist.innerHTML).toBe('<li>Task 1 modified</li>');
+  });
+  // Updating Function
+  test('Check a task completed', () => {
+    const todolist = document.querySelectorAll('#ulTaskList');
+    task.setCompleted(0, true);
+
+    let aux = '';
+    task.getTasks().forEach((newTask) => {
+      if (!newTask.completed) {
+        aux += `<li>${newTask.description}</li>`;
+      }
+    });
+    todolist.innerHTML = aux;
+
+    expect(todolist.innerHTML).toBe('');
   });
 
   // removeTask
